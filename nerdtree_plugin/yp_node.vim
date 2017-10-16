@@ -13,6 +13,8 @@ call NERDTreeAddMenuItem({
 function! NERDTreeYankNode()
   let l:currentNode = g:NERDTreeFileNode.GetSelected()
   let g:nerd_yanked_path = l:currentNode.path.str()
+  redraw
+  echo 'Yanked' g:nerd_yanked_path
 endfunction
 
 
